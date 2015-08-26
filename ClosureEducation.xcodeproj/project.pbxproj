@@ -13,6 +13,7 @@
 		5C546B1A1B8E279A00EF2B0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C546B191B8E279A00EF2B0F /* Images.xcassets */; };
 		5C546B1D1B8E279A00EF2B0F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C546B1B1B8E279A00EF2B0F /* LaunchScreen.xib */; };
 		5C546B291B8E279A00EF2B0F /* ClosureEducationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C546B281B8E279A00EF2B0F /* ClosureEducationTests.swift */; };
+		5C546B331B8E27BC00EF2B0F /* HTMLElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C546B321B8E27BC00EF2B0F /* HTMLElement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		5C546B221B8E279A00EF2B0F /* ClosureEducationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClosureEducationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C546B271B8E279A00EF2B0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C546B281B8E279A00EF2B0F /* ClosureEducationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureEducationTests.swift; sourceTree = "<group>"; };
+		5C546B321B8E27BC00EF2B0F /* HTMLElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLElement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				5C546B121B8E279A00EF2B0F /* AppDelegate.swift */,
+				5C546B321B8E27BC00EF2B0F /* HTMLElement.swift */,
 				5C546B141B8E279A00EF2B0F /* ViewController.swift */,
 				5C546B161B8E279A00EF2B0F /* Main.storyboard */,
 				5C546B191B8E279A00EF2B0F /* Images.xcassets */,
@@ -214,6 +217,7 @@
 			files = (
 				5C546B151B8E279A00EF2B0F /* ViewController.swift in Sources */,
 				5C546B131B8E279A00EF2B0F /* AppDelegate.swift in Sources */,
+				5C546B331B8E27BC00EF2B0F /* HTMLElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
