@@ -13,9 +13,23 @@ class BadClassDesignWithLazyClosureVarTests: XCTestCase {
 	
 	var expectation:XCTestExpectation!
 	
+	//MARK: Test 1
+	//In this test we call the closure. Since the closure captures self without the use of [weak self],
+	//we expect that testObj will never deinit.
+	func testWithClosureCall() {
+		
+		var testObj = BadClassDesignWithLazyClosureVar(deinitBlock:{
+			XCTFail("Expected object to never deallocate")
+		})
+		
+		//Call the closure
+		testObj.lazyVarClosureThatCapturesSelf()
+		
+	}
 	
-	
-    func testWithoutClosureCall() {
+	//MARK: Test 2
+	//In this test we *dont* call the closure and expect that the deinit block will get called.
+	func testWithoutClosureCall() {
 		self.expectation = self.expectationWithDescription("Expected object to deallocate")
 		
 		useObjectWithoutInvokingClosure()
@@ -24,30 +38,12 @@ class BadClassDesignWithLazyClosureVarTests: XCTestCase {
     }
 	
 	func useObjectWithoutInvokingClosure() {
-		var testObj = BadClassDesignWithLazyClosureVar(name:"Foo", deinitBlock:{
+		var testObj = BadClassDesignWithLazyClosureVar(deinitBlock:{
 			self.expectation.fulfill()
 		})
 		
 		//DON'T Call the closure
 		//testObj.lazyVarClosureThatCapturesSelf()
-	}
-	
-	
-	
-	
-	//In this test we actually call the closure. Since the closure captures self without the use of [weak self],
-	//we expect that testObj will never deinit.
-	func testWithClosureCall() {
-		
-		var testObj = BadClassDesignWithLazyClosureVar(name:"Foo", deinitBlock:{
-			XCTFail("Expected object to never deallocate")
-		})
-		
-		//Call the closure
-		testObj.lazyVarClosureThatCapturesSelf()
-
-	}
-	
-	
+	}	
 	
 }
