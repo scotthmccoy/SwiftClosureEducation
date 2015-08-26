@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class ClosureEducationTests: XCTestCase {
+class BadClassDesignWithLazyClosureVarTests: XCTestCase {
 	
 	var expectation:XCTestExpectation!
 	
@@ -24,23 +24,27 @@ class ClosureEducationTests: XCTestCase {
     }
 	
 	func useObjectWithoutInvokingClosure() {
-		var testObj = HTMLElement(name:"Foo", deinitBlock:{
+		var testObj = BadClassDesignWithLazyClosureVar(name:"Foo", deinitBlock:{
 			self.expectation.fulfill()
 		})
 		
-		//testObj.asHTML()
+		//DON'T Call the closure
+		//testObj.lazyVarClosureThatCapturesSelf()
 	}
 	
 	
 	
 	
-	
+	//In this test we actually call the closure. Since the closure captures self without the use of [weak self],
+	//we expect that testObj will never deinit.
 	func testWithClosureCall() {
 		
-		var testObj = HTMLElement(name:"Foo", deinitBlock:{
+		var testObj = BadClassDesignWithLazyClosureVar(name:"Foo", deinitBlock:{
 			XCTFail("Expected object to never deallocate")
 		})
-		testObj.asHTML()
+		
+		//Call the closure
+		testObj.lazyVarClosureThatCapturesSelf()
 
 	}
 	
