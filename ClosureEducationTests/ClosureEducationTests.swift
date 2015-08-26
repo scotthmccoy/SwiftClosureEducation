@@ -10,14 +10,39 @@ import UIKit
 import XCTest
 
 class ClosureEducationTests: XCTestCase {
-    
-
-    
-    func testHTMLElement() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+	
+	var expectation:XCTestExpectation!
+	
+	override func setUp() {
+		OXMDebugLogWhereAmI()
+		
+		let expectation = self.expectationWithDescription("Expected object to deallocate")
+	}
+	
+	override func tearDown() {
+		OXMDebugLogWhereAmI()
+		
+		self.waitForExpectationsWithTimeout(1, handler:nil)
+	}
+	
+    func testWithClosureCall() {
+		
+		OXMDebugLogWhereAmI()
+		
+		var testObj = HTMLElement(name:"Foo", deinitBlock:{
+			self.expectation.fulfill()
+		})
+		testObj.asHTML()
+		
+		
     }
     
-
-    
+//	func testWithOutClosureCall() {
+//		var testObj = HTMLElement(name:"Foo", deinitBlock:{
+//			println("Test")
+//		})
+//		//testObj.asHTML()
+//	}
+	
+	
 }

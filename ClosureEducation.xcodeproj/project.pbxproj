@@ -14,6 +14,9 @@
 		5C546B1D1B8E279A00EF2B0F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C546B1B1B8E279A00EF2B0F /* LaunchScreen.xib */; };
 		5C546B291B8E279A00EF2B0F /* ClosureEducationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C546B281B8E279A00EF2B0F /* ClosureEducationTests.swift */; };
 		5C546B331B8E27BC00EF2B0F /* HTMLElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C546B321B8E27BC00EF2B0F /* HTMLElement.swift */; };
+		5C546B341B8E29CD00EF2B0F /* HTMLElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C546B321B8E27BC00EF2B0F /* HTMLElement.swift */; };
+		5C546B361B8E306300EF2B0F /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C546B351B8E306300EF2B0F /* Logging.swift */; };
+		5C546B371B8E306C00EF2B0F /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C546B351B8E306300EF2B0F /* Logging.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,7 @@
 		5C546B271B8E279A00EF2B0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C546B281B8E279A00EF2B0F /* ClosureEducationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureEducationTests.swift; sourceTree = "<group>"; };
 		5C546B321B8E27BC00EF2B0F /* HTMLElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLElement.swift; sourceTree = "<group>"; };
+		5C546B351B8E306300EF2B0F /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 				5C546B121B8E279A00EF2B0F /* AppDelegate.swift */,
 				5C546B321B8E27BC00EF2B0F /* HTMLElement.swift */,
 				5C546B141B8E279A00EF2B0F /* ViewController.swift */,
+				5C546B351B8E306300EF2B0F /* Logging.swift */,
 				5C546B161B8E279A00EF2B0F /* Main.storyboard */,
 				5C546B191B8E279A00EF2B0F /* Images.xcassets */,
 				5C546B1B1B8E279A00EF2B0F /* LaunchScreen.xib */,
@@ -218,6 +223,7 @@
 				5C546B151B8E279A00EF2B0F /* ViewController.swift in Sources */,
 				5C546B131B8E279A00EF2B0F /* AppDelegate.swift in Sources */,
 				5C546B331B8E27BC00EF2B0F /* HTMLElement.swift in Sources */,
+				5C546B361B8E306300EF2B0F /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +232,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C546B291B8E279A00EF2B0F /* ClosureEducationTests.swift in Sources */,
+				5C546B371B8E306C00EF2B0F /* Logging.swift in Sources */,
+				5C546B341B8E29CD00EF2B0F /* HTMLElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

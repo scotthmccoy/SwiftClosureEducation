@@ -11,23 +11,23 @@ import Foundation
 class HTMLElement {
 	
 	let name: String
-	let text: String?
+
+	
+	var deinitBlock: () -> ()
 	
 	lazy var asHTML: () -> String = {
-		if let text = self.text {
-			return "<\(self.name)>\(text)</\(self.name)>"
-		} else {
-			return "<\(self.name) />"
-		}
+
+		return "<\(self.name)>TAG BODY</\(self.name)>"
+
 	}
 	
-	init(name: String, text: String? = nil) {
+	init(name: String, deinitBlock: () -> ()) {
 		self.name = name
-		self.text = text
+		self.deinitBlock = deinitBlock
 	}
 	
 	
 	deinit {
-		println("\(self.name) is being deinitialized")
+		deinitBlock()
 	}
 }
