@@ -2,4 +2,102 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ClosureEducation/TypicalClassDesign.swift"
+            timestampString = "462325756.984353"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "dispatchAfterWithWeakSelf()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClosureEducation.TypicalClassDesign.(dispatchAfterWithWeakSelf (ClosureEducation.TypicalClassDesign) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "ClosureEducation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/scott.mccoy/Documents/XCodeProjects/ClosureEducation/ClosureEducation/TypicalClassDesign.swift"
+                  timestampString = "462325757.309919"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClosureEducationTests.TypicalClassDesign.(dispatchAfterWithWeakSelf (ClosureEducationTests.TypicalClassDesign) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "ClosureEducationTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/scott.mccoy/Documents/XCodeProjects/ClosureEducation/ClosureEducation/TypicalClassDesign.swift"
+                  timestampString = "462325757.477026"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ClosureEducation/TypicalClassDesign.swift"
+            timestampString = "462325756.984353"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "dispatchAfterWithUnownedSelf()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClosureEducation.TypicalClassDesign.(dispatchAfterWithUnownedSelf (ClosureEducation.TypicalClassDesign) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "ClosureEducation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/scott.mccoy/Documents/XCodeProjects/ClosureEducation/ClosureEducation/TypicalClassDesign.swift"
+                  timestampString = "462325757.3105"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ClosureEducationTests.TypicalClassDesign.(dispatchAfterWithUnownedSelf (ClosureEducationTests.TypicalClassDesign) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "ClosureEducationTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/scott.mccoy/Documents/XCodeProjects/ClosureEducation/ClosureEducation/TypicalClassDesign.swift"
+                  timestampString = "462325757.477731"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

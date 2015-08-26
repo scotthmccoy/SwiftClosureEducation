@@ -1,11 +1,28 @@
+//In this test we demonstrate how closures that do have strong reference cylces that get nilled out allow their parent objects to deinit.
+
 import UIKit
 import XCTest
 
 class BadClassDesignWithNonLazyClosureVarTests: XCTestCase {
 	
-	
-
 	//MARK: Test 1
+	//In this somewhat pedantic test we don't set the closure and expect that the deinit block will get called.
+	var expectationForTestWithClosureCall:XCTestExpectation!
+	func testWithoutClosureCall() {
+		self.expectationForTestWithClosureCall = self.expectationWithDescription("Expected object to deallocate")
+		
+		useObjectWithoutInvokingClosure()
+		
+		self.waitForExpectationsWithTimeout(1, handler:nil)
+	}
+	
+	func useObjectWithoutInvokingClosure() {
+		var testObj = BadClassDesignWithNonLazyClosureVar(deinitBlock:{
+			self.expectationForTestWithClosureCall.fulfill()
+		})
+	}
+	
+	//MARK: Test 2
 	//In this test we set and call the closure. We expect that testObj will never deinit.
 	func testWithClosureCall() {
 		
@@ -21,27 +38,10 @@ class BadClassDesignWithNonLazyClosureVarTests: XCTestCase {
 		//Call the closure
 		testObj.nonLazyVarClosureThatCapturesSelf()
 	}
-	
-	
-	//MARK: Test 2
-	//In this test we *dont* call the closure and expect that the deinit block will get called.
-	var expectationForTestWithClosureCall:XCTestExpectation!
-	func testWithoutClosureCall() {
-		self.expectationForTestWithClosureCall = self.expectationWithDescription("Expected object to deallocate")
-		
-		useObjectWithoutInvokingClosure()
-		
-		self.waitForExpectationsWithTimeout(1, handler:nil)
-	}
-	
-	func useObjectWithoutInvokingClosure() {
-		var testObj = BadClassDesignWithNonLazyClosureVar(deinitBlock:{
-			self.expectationForTestWithClosureCall.fulfill()
-		})
-	}
+
 
 	//MARK: Test 3
-	//In this test we set and call the closure, then nil it. We expect that testObj will deinit.
+	//In this test we set and call the closure, then nil the closure. We expect that testObj will deinit.
 	var expectationForTestWithClosureCallThatGetsNilledOut:XCTestExpectation!
 	func testWithClosureCallThatGetsNilledOut() {
 		self.expectationForTestWithClosureCallThatGetsNilledOut = self.expectationWithDescription("Expected object to deallocate")

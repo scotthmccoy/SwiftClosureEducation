@@ -1,10 +1,4 @@
-//
-//  ClosureEducationTests.swift
-//  ClosureEducationTests
-//
-//  Created by Scott McCoy on 8/26/15.
-//  Copyright (c) 2015 ScottSoft. All rights reserved.
-//
+//In this test we demonstrate how lazy vars can cause self-retains, but only if activated (and thus, instatiated)
 
 import UIKit
 import XCTest
@@ -44,6 +38,6 @@ class BadClassDesignWithLazyClosureVarTests: XCTestCase {
 		
 		//DON'T Call the closure
 		//testObj.lazyVarClosureThatCapturesSelf()
-	}	
+	}
 	
 }
