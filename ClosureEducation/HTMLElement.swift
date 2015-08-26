@@ -11,10 +11,7 @@ import Foundation
 class HTMLElement {
 	
 	let name: String
-
-	
 	var deinitBlock: () -> ()
-	
 	lazy var asHTML: () -> String = {
 
 		return "<\(self.name)>TAG BODY</\(self.name)>"

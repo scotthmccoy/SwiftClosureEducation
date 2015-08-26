@@ -13,36 +13,37 @@ class ClosureEducationTests: XCTestCase {
 	
 	var expectation:XCTestExpectation!
 	
-	override func setUp() {
-		OXMDebugLogWhereAmI()
-		
-		let expectation = self.expectationWithDescription("Expected object to deallocate")
-	}
 	
-	override func tearDown() {
-		OXMDebugLogWhereAmI()
+	
+    func testWithoutClosureCall() {
+		self.expectation = self.expectationWithDescription("Expected object to deallocate")
 		
+		useObjectWithoutInvokingClosure()
+
 		self.waitForExpectationsWithTimeout(1, handler:nil)
-	}
+    }
 	
-    func testWithClosureCall() {
-		
-		OXMDebugLogWhereAmI()
-		
+	func useObjectWithoutInvokingClosure() {
 		var testObj = HTMLElement(name:"Foo", deinitBlock:{
 			self.expectation.fulfill()
 		})
+		
+		//testObj.asHTML()
+	}
+	
+	
+	
+	
+	
+	func testWithClosureCall() {
+		
+		var testObj = HTMLElement(name:"Foo", deinitBlock:{
+			XCTFail("Expected object to never deallocate")
+		})
 		testObj.asHTML()
-		
-		
-    }
-    
-//	func testWithOutClosureCall() {
-//		var testObj = HTMLElement(name:"Foo", deinitBlock:{
-//			println("Test")
-//		})
-//		//testObj.asHTML()
-//	}
+
+	}
+	
 	
 	
 }
